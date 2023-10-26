@@ -1,8 +1,8 @@
 # Clone repo
 ```
-Bước 1: git clone https://github.com/LamKser/esrgan_main.git
-Bước 2: Di chuyển tới thư mục esrgan_main
-        cd esrgan_main
+Bước 1: git clone https://github.com/TranDuyNgocBao/training_swinir_only.git
+Bước 2: Di chuyển tới thư mục SwinIR
+        cd SwinIR
 ```
 
 # Requirements
@@ -11,42 +11,37 @@ Cài đặt thư viện
 pip install -r requirements.txt
 ```
 
-Bên trong thư mục `esrgan_main`:
+Bên trong thư mục `SwinIR`:
 # Data
-* Tải `dataset.zip` tại link: [GG drive](https://drive.google.com/file/d/1slUHOB8UzCznLFMwfwmzO6_oktbiuvK-/view?usp=sharing)
-* Tiếp theo giải nén data vào thư mục `dataset`
-* Cấu trúc của thư mục `dataset` sẽ bao gồm:
+* Tải `data_sets.zip` tại link: [GG drive](https://drive.google.com/file/d/1VQJonF_wdOHQV-ZLzKVvfwT9GW5X_mgA/view?usp=sharing)
+* Tiếp theo giải nén data vào thư mục `datasets`
+* Cấu trúc của thư mục `datasets` sẽ bao gồm:
     ```
-    dataset
+    datasets
     ├───combine_data_training   // data training
-    └───val                     // data val (5 ảnh từ tập test USR248)
-        ├───hr
-        └───lr
+    └───hr_val_2                     // data val (5 ảnh từ tập val USR248)
+    └───Lr_val_2                     // data val (5 ảnh từ tập val USR248)
     ```
 
 # Pretrain model
-* Tải `pretrain.zip` tại link: [GG drive](https://drive.google.com/file/d/1T2uQxyzWZPfnMdSYVrD8Jc9w8Dj79PG7/view?usp=sharing)
-* Tiếp theo giải nén data vào thư mục `esrgan/model_zoo`
-* Cấu trúc của thư mục `esrgan/model_zoo` sẽ bao gồm:
+* Tải `pretrain.zip` tại link: [GG drive](https://drive.google.com/file/d/1BCGK1KDacNaz_AATHEEXUMq729WJYfu9/view?usp=sharing)
+* Tiếp theo giải nén file pretrain bỏ vào thư mục `model_zoo`
+* Cấu trúc của thư mục `model_zoo` sẽ bao gồm:
     ```
-    esrgan/model_zoo
-            ├───rrdb_x4_esrgan.pth  
-            └───rrdb_x4_psnr.pth
+    model_zoo
+    ├───pretrain
+    └───README(1).md
     ```
 # Training
 
-* Train original ESRGAN
+* Train SwinIR với multiprocessing (tuy nhiên thường gặp lỗi conflict giữa các thiết bị)
 ```
-python esrgan/main_train_gan.py --opt esrgan/options/train_rrdb_esrgan.json
+torchrun --standalone --nnodes=1 --nproc_per_node=1 main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json  --dist True
 ```
-* Train ESRGAN with patch Gan
+* Train SwinIR với đơn processing (ổn định hơn, ít gặp lỗi hơn)
 ```
-python esrgan/main_train_psnr.py --opt esrgan/options/train_rrdb_esrgan_patchgan.json
-```
-
-* Train PSNR
-```
-python esrgan/main_train_psnr.py --opt esrgan/options/train_rrdb_psnr.json
+python main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json  --dist True
 ```
 
-**Note:** Các trọng số được lưu tại thư mục `experiments`
+**Note:** Cần chờ khoảng 1 phút từ lúc bắt đàu train để xác định train có được hay không? Sau một phút thì mô hình tự học không gặp lỗi
+**Note:** Các trọng số được lưu tại thư mục `model_zoo`
