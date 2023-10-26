@@ -43,5 +43,5 @@ torchrun --standalone --nnodes=1 --nproc_per_node=1 main_train_psnr.py --opt swi
 python main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json  --dist True
 ```
 
-**Note:** Cần chờ khoảng 1 phút từ lúc bắt đàu train để xác định train có được hay không? Sau một phút thì mô hình tự học không gặp lỗi \n
+**Note:** Cần chờ khoảng 1 phút từ lúc bắt đàu train để xác định train có được hay không? Sau một phút thì mô hình tự học không gặp lỗi **
 **Note:** Các trọng số được lưu tại thư mục `model_zoo`
