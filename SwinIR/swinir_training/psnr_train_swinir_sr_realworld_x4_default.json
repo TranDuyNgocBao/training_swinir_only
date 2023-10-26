@@ -9,7 +9,7 @@
 
   , "path": {
     "root": "model_zoo"            // "denoising" | "superresolution" | "dejpeg"
-    , "pretrained_netG": "model_zoo/swinir_pretrained/003_realSR_BSRGAN_DFO_s64w8_SwinIR-M_x4_GAN.pth"      // path of pretrained model
+    , "pretrained_netG": "model_zoo/pretrain/003_realSR_BSRGAN_DFO_s64w8_SwinIR-M_x4_GAN.pth"      // path of pretrained model
     , "pretrained_netE": null      // path of pretrained model
   }
 
