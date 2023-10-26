@@ -36,7 +36,11 @@ Bên trong thư mục `SwinIR`:
 
 * Train SwinIR với multiprocessing (tuy nhiên thường gặp lỗi conflict giữa các thiết bị)
 ```
-torchrun --standalone --nnodes=1 --nproc_per_node=1 main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json  --dist True
+torchrun --standalone --nnodes=1 --nproc_per_node=8 main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json  --dist True // thay đổi nproc_per_node=8 để lựa chọn số processes mỗi unit.
+```
+hoặc
+```
+torchrun --standalone --nnodes=1 --nproc_per_node=1 main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json  --dist True // như bên dưới
 ```
 * Train SwinIR với đơn processing (ổn định hơn, ít gặp lỗi hơn)
 ```
