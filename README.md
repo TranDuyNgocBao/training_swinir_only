@@ -20,7 +20,7 @@ Bên trong thư mục `SwinIR`:
     datasets
     ├───combine_data_training   // data training
     └───hr_val_2                     // data val (5 ảnh từ tập val USR248)
-    └───Lr_val_2                     // data val (5 ảnh từ tập val USR248)
+    └───lr_val_2                     // data val (5 ảnh từ tập val USR248)
     ```
 
 # Pretrain model
