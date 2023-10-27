@@ -2,10 +2,10 @@
 ```
 Bước 1: git clone https://github.com/TranDuyNgocBao/training_swinir_only.git
 Bước 2: Di chuyển tới thư mục SwinIR
-        cd SwinIR
+        cd training_swinir_only/SwinIR
 ```
 
-Bên trong thư mục `training_swinir_onlySwinIR`:
+Bên trong thư mục `training_swinir_only/SwinIR`:
 
 # Requirements
 Cài đặt thư viện
