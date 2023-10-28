@@ -195,6 +195,7 @@ def main(json_path='options/train_msrresnet_psnr.json'):
         # losses['epochs']['GAN_loss'] = 0
         # losses['epochs']['Total_G_loss'] = 0
         # losses['epochs']['Total_D_loss'] = 0
+        num_losses = 0
 
         for i, train_data in enumerate(train_loader):
 
@@ -220,6 +221,7 @@ def main(json_path='options/train_msrresnet_psnr.json'):
             # losses['epochs']['GAN_loss'] += log['D_loss']
             # losses['epochs']['Total_G_loss'] += log['Total_G_loss']
             # losses['epochs']['Total_D_loss'] += log['Total_D_loss']
+            num_losses += 1
 
             # -------------------------------
             # 4) training information
@@ -337,7 +339,7 @@ def main(json_path='options/train_msrresnet_psnr.json'):
         
         for k in losses['epochs'].keys():
             if k != 'epoch':
-                losses['epochs'][k] /= i
+                losses['epochs'][k] /= num_losses
         for k in losses['epochs'].keys():
             if k != 'epoch':
                 loss = losses['epochs'][k]
