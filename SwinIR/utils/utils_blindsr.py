@@ -447,7 +447,7 @@ def degradation_bsrgan(img, sf=4, lq_patchsize=72, isp_model=None):
     sf_ori = sf
 
     h1, w1 = img.shape[:2]
-    #img = img.copy()[:w1 - w1 % sf, :h1 - h1 % sf, ...]  # mod crop
+    img = img.copy()[:w1 - w1 % sf, :h1 - h1 % sf, ...]  # mod crop
     h, w = img.shape[:2]
 
     if h < lq_patchsize*sf or w < lq_patchsize*sf:
