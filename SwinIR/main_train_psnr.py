@@ -190,7 +190,7 @@ def main(json_path='options/train_msrresnet_psnr.json'):
         losses = dict()
         losses['epochs'] = dict()
         losses['epochs']['epoch'] = epoch
-        losses['epochs']['L1_loss'] = 0
+        losses['epochs']['L1_loss'] = 0.0
         # losses['epochs']['Per_loss'] = 0
         # losses['epochs']['GAN_loss'] = 0
         # losses['epochs']['Total_G_loss'] = 0
@@ -329,7 +329,7 @@ def main(json_path='options/train_msrresnet_psnr.json'):
             avg_psnr += current_psnr
             avg_ssim += current_ssim
 
-        if epoch % opt['train']['checkpoint_save_epoch'] == 0:
+        if epoch % opt['train']['checkpoint_save_epoch'] == 0 and opt['rank'] == 0:
           model.save(f"{epoch}_{current_step}")
           message = '[epoch:{:3d}] Saving Model'.format(epoch)
 
