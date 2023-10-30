@@ -10,7 +10,6 @@ from models.loss import CharbonnierLoss
 from models.loss_ssim import SSIMLoss
 
 import sys, os
-sys.path.append(os.path.abspath(os.path.join('/content/drive/MyDrive/UIP_Project/SwinIR', 'utils')))
 from utils.utils_model import test_mode
 from utils.utils_regularizers import regularizer_orth, regularizer_clip
 
