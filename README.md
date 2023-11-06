@@ -35,7 +35,7 @@ pip install -r requirements.txt
     └───README(1).md
     ```
 # Training
-- Có 3 files json trong `swinir_training`, chúng ta sẽ train 2 files, trong câu lệnh training bên dưới thì lần lượt đổi đường dẫn của `--opt` thành: `swinir_training/psnr_train_swinir_sr_realworld_x4_large.json` và ``
+- Có 3 files json trong `swinir_training`, chúng ta sẽ train 2 files, trong câu lệnh training bên dưới thì lần lượt đổi đường dẫn của `--opt` thành: `swinir_training/psnr_train_swinir_sr_realworld_x4_large.json` và `swinir_training/psnr_train_swinir_sr_realworld_x4_beginner.json`
 
 - Chỉ chọn một trong 3 lệnh bên dưới để training (1 trong 3 options)
   
