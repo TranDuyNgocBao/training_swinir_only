@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 # Pretrain model
 * Tải `pretrain.zip` tại link: [GG drive](https://drive.google.com/drive/folders/1XvkjAMADgIV0rSr6jCsr36Gdeak_Kdit?usp=sharing)
-* Tiếp theo giải nén file pretrain có thư mục `pretrain` thì bỏ vào thư mục `SwinIR/model_zoo/pretrain`
+* Tiếp theo tải 2 files trong link bỏ vào thư mục `pretrain` theo path `SwinIR/model_zoo/pretrain` (nếu không có thì tạo thêm thư mục `pretrain`)
 * Cấu trúc của thư mục `model_zoo` sẽ bao gồm:
     ```
     model_zoo
@@ -35,7 +35,7 @@ pip install -r requirements.txt
     └───README(1).md
     ```
 # Training
-- Train 1 file json duy nhất nên trong `swinir_training` chỉ có một file json.
+- Có 3 files json trong `swinir_training`, chúng ta sẽ train 2 files, trong câu lệnh training bên dưới thì lần lượt đổi đường dẫn của `--opt` thành: `swinir_training/psnr_train_swinir_sr_realworld_x4_large.json` và ``
 - Chỉ chọn một trong 3 lệnh bên dưới để training (1 trong 3 options)
   
 * Train SwinIR với multiprocessing (tuy nhiên thường gặp lỗi conflict giữa các thiết bị)
