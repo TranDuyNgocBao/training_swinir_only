@@ -41,17 +41,17 @@ pip install -r requirements.txt
   
 * Train SwinIR với multiprocessing (tuy nhiên thường gặp lỗi conflict giữa các thiết bị)
 ```
-torchrun --standalone --nnodes=1 --nproc_per_node=8 main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json
+torchrun --standalone --nnodes=1 --nproc_per_node=8 main_train_psnr_2.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json
 # thay đổi nproc_per_node=8 để lựa chọn số processes mỗi unit.
 ```
 hoặc
 ```
-torchrun --standalone --nnodes=1 --nproc_per_node=1 main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json
+torchrun --standalone --nnodes=1 --nproc_per_node=1 main_train_psnr_2.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json
 # như bên dưới
 ```
 * Train SwinIR với đơn processing (ổn định hơn, ít gặp lỗi hơn)
 ```
-python main_train_psnr.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json
+python main_train_psnr_2.py --opt swinir_training/psnr_train_swinir_sr_realworld_x4_default.json
 ```
 
 **Note:** Cần chờ khoảng 1 phút từ lúc bắt đàu train để xác định train có được hay không? Sau một phút thì mô hình tự học không gặp lỗi **
