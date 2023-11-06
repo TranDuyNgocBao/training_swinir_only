@@ -9,8 +9,8 @@
 
   , "path": {
     "root": "model_zoo"            // "denoising" | "superresolution" | "dejpeg"
-    , "pretrained_netG": "/content/drive/MyDrive/training_swinir_only/SwinIR/model_zoo/swinir_sr_realworld_x4_psnr/models/64_12805_G.pth"      // path of pretrained model
-    , "pretrained_netE": "/content/drive/MyDrive/training_swinir_only/SwinIR/model_zoo/swinir_sr_realworld_x4_psnr/models/64_12805_E.pth"      // path of pretrained model
+    , "pretrained_netG": "model_zoo/pretrain/64_12805_G.pth"      // path of pretrained model
+    , "pretrained_netE": "model_zoo/pretrain/64_12805_E.pth"      // path of pretrained model
   }
 
   , "datasets": {
@@ -28,7 +28,7 @@
 
       , "dataloader_shuffle": true
       , "dataloader_num_workers": 2
-      , "dataloader_batch_size": 1        // batch size 1 | 16 | 32 | 48 | 64 | 128. Total batch size =4x8=32 in SwinIR
+      , "dataloader_batch_size": 32        // batch size 1 | 16 | 32 | 48 | 64 | 128. Total batch size =4x8=32 in SwinIR
       , "save": true
     }
     , "test": {
