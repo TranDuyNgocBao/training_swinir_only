@@ -26,7 +26,7 @@ pip install -r requirements.txt
     ```
 
 # Pretrain model
-* Tải `pretrain.zip` tại link: [GG drive](https://drive.google.com/file/d/1BCGK1KDacNaz_AATHEEXUMq729WJYfu9/view?usp=sharing)
+* Tải `pretrain.zip` tại link: [GG drive](https://drive.google.com/drive/folders/1XvkjAMADgIV0rSr6jCsr36Gdeak_Kdit?usp=sharing)
 * Tiếp theo giải nén file pretrain có thư mục `pretrain` thì bỏ vào thư mục `SwinIR/model_zoo/pretrain`
 * Cấu trúc của thư mục `model_zoo` sẽ bao gồm:
     ```
