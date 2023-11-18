@@ -81,13 +81,13 @@
 
     , "checkpoint_test": 1000           // for testing
     , "checkpoint_save": 5000       // for saving model
-    , "checkpoint_print": 1000           // for print
+    , "checkpoint_print": 100           // for print
     , "epoch": 500000
     , "resume_training": true
   }
   , "wandb": {
     "project": "Training SwinIR only"
     , "name": "LargeEpoch-Continue"
-    , "resume_id": null
+    , "resume_id": "jvfqoxgp"
   }
 }
