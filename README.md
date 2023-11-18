@@ -26,12 +26,12 @@ pip install -r requirements.txt
     ```
 
 # Pretrain model
-* Tải `pretrain.zip` tại link: [GG drive](https://drive.google.com/drive/folders/1XvkjAMADgIV0rSr6jCsr36Gdeak_Kdit?usp=sharing)
-* Tiếp theo tải 2 files trong link bỏ vào thư mục `pretrain` theo path `SwinIR/model_zoo/pretrain` (nếu không có thì tạo thêm thư mục `pretrain`)
+* Tải folder `swinir_sr_realworld_x4_psnr` tại link: [GG drive](https://drive.google.com/drive/folders/1OzSKCk57-NLC4-03EoVxBDg7jf8xM5AP?usp=sharing)
+* Đặt folder vừa tải theo path `SwinIR/model_zoo/swinir_sr_realworld_x4_psnr` 
 * Cấu trúc của thư mục `model_zoo` sẽ bao gồm:
     ```
     model_zoo
-    ├───pretrain
+    ├───swinir_sr_realworld_x4_psnr
     └───README(1).md
     ```
 # Training
