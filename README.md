@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 # Pretrain model
 * Tải folder `swinir_sr_realworld_x4_psnr` tại link: [GG drive](https://drive.google.com/drive/folders/1OzSKCk57-NLC4-03EoVxBDg7jf8xM5AP?usp=sharing)
-* Đặt folder vừa tải theo path `SwinIR/model_zoo/swinir_sr_realworld_x4_psnr` 
+* Thay folder vừa tải theo path `SwinIR/model_zoo/swinir_sr_realworld_x4_psnr` cho folder cũ trong github 
 * Cấu trúc của thư mục `model_zoo` sẽ bao gồm:
     ```
     model_zoo
