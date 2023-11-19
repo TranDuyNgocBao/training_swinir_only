@@ -88,6 +88,6 @@
   , "wandb": {
     "project": "Training SwinIR only"
     , "name": "LargeEpoch-Continue"
-    , "resume_id": null
+    , "resume_id": "6p2e30y7"
   }
 }
