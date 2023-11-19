@@ -28,7 +28,7 @@
 
       , "dataloader_shuffle": true
       , "dataloader_num_workers": 2
-      , "dataloader_batch_size": 32        // batch size 1 | 16 | 32 | 48 | 64 | 128. Total batch size =4x8=32 in SwinIR
+      , "dataloader_batch_size": 16        // batch size 1 | 16 | 32 | 48 | 64 | 128. Total batch size =4x8=32 in SwinIR
       , "save": true
     }
     , "test": {
@@ -88,6 +88,6 @@
   , "wandb": {
     "project": "Training SwinIR only"
     , "name": "LargeEpoch-Continue"
-    , "resume_id": 22ygx3z9
+    , "resume_id": "22ygx3z9"
   }
 }
