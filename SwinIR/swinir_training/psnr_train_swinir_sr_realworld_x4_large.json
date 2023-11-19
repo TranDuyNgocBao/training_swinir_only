@@ -17,7 +17,7 @@
     "train": {
       "name": "train_dataset"           // just name
       , "dataset_type": "blindsr"         // "dncnn" | "dnpatch" | "fdncnn" | "ffdnet" | "sr" | "srmd" | "dpsr" | "plain" | "plainpatch" | "jpeg"
-      , "dataroot_H": "/content/drive/MyDrive/UIP_Project/datasets/combine_data_training"// path of H training dataset. DIV2K (800 training images) + Flickr2K (2650 images) + + OST (10324 images)
+      , "dataroot_H": "datasets/combine_data_training"// path of H training dataset. DIV2K (800 training images) + Flickr2K (2650 images) + + OST (10324 images)
       , "dataroot_L": null            // path of L training dataset
 
       , "degradation_type": "bsrgan"    // "bsrgan" | "bsrgan_plus"
@@ -34,8 +34,8 @@
     , "test": {
       "name": "test_dataset"            // just name
       , "dataset_type": "sr"         // "dncnn" | "dnpatch" | "fdncnn" | "ffdnet" | "sr" | "srmd" | "dpsr" | "plain" | "plainpatch" | "jpeg"
-      , "dataroot_H": "/content/drive/MyDrive/UIP_Project/datasets/hr_val_2"  // path of H testing dataset
-      , "dataroot_L": "/content/drive/MyDrive/UIP_Project/datasets/lr_val_2"              // path of L testing dataset
+      , "dataroot_H": "datasets/hr_val_2"  // path of H testing dataset
+      , "dataroot_L": "datasets/lr_val_2"              // path of L testing dataset
 
     }
   }
